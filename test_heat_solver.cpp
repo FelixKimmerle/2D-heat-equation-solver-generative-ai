@@ -24,7 +24,7 @@ void test_read_parameters()
     assert(p.ic_type == 0);
     assert(p.output_file == "test.vtu");
     
-    // Clean up temporary file
+    // Clean up temporary file (errors ignored as cleanup is best-effort)
     std::remove(fname);
 }
 
