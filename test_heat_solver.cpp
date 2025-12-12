@@ -35,7 +35,7 @@ void test_solver_dimensions()
     p.dt = 0.0001;
     p.t_final = 0.001;
     p.ic_type = 1;
-    p.output_file = "dummy.vtu";
+    p.output_file = "";
 
     auto u = solve_heat_equation(p);
     assert(static_cast<int>(u.size()) == p.nx * p.ny);
