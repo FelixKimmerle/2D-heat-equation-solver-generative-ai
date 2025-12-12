@@ -1,0 +1,9 @@
+ I acknowledge the use of RAI (https://rai.uni-stuttgart.de/) to implement the entirety of this code.
+
+Prompts:
+1. Write me c++ code that solves the 2d heat equation. Read in the parameters from a file and output a vtu file with the results. Add documentation and and tests.
+
+2. it doesnt compile: g++ -std=c++17 -O2 -o heat2d main.cpp HeatSolver.cpp g++ -std=c++17 -O2 -o test_heat_solver test_heat_solver.cpp HeatSolver.cpp test_heat_solver.cpp: In function 'void test_read_parameters()': test_heat_solver.cpp:10:32: error: variable 'std::ofstream out' has initializer but incomplete type 10 | std::ofstream out(fname); | ^ test_heat_solver.cpp:4:1: note: 'std::ofstream' is defined in header '<fstream>'; this is probably fixable by adding '#include <fstream>' 3 | #include <iostream> +++ |+#include <fstream> 4 |
+
+3. generate a commit message for the code change
+

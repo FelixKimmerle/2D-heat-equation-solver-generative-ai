@@ -1,0 +1,10 @@
+# 2D Heat equation parameters
+nx 51           # number of grid points in x
+ny 51           # number of grid points in y
+lx 1.0          # domain length in x
+ly 1.0          # domain length in y
+alpha 0.01      # diffusion coefficient
+dt 0.0001       # time step size
+t_final 0.01    # final time
+ic_type 1       # 0: zero IC, 1: Gaussian in the center
+output_file solution.vtu
