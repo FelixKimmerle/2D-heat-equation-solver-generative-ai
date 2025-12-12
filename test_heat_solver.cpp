@@ -2,6 +2,7 @@
 #include <cassert>
 #include <iostream>
 #include <fstream>
+#include <cstdio>
 
 void test_read_parameters()
 {
@@ -22,6 +23,9 @@ void test_read_parameters()
     assert(p.t_final == 0.1);
     assert(p.ic_type == 0);
     assert(p.output_file == "test.vtu");
+    
+    // Clean up temporary file (errors ignored as cleanup is best-effort)
+    std::remove(fname);
 }
 
 void test_solver_dimensions()
