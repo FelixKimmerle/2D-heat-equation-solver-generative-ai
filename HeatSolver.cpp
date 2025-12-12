@@ -225,7 +225,7 @@ void write_vtu(const std::string& filename, const HeatParams& params, const std:
     out << "      </Cells>\n";
 
     // Point data (scalar field u)
-    if ((int)u.size() != num_points)
+    if (static_cast<int>(u.size()) != num_points)
         throw std::runtime_error("Size of solution vector does not match grid.");
 
     out << "      <PointData Scalars=\"temperature\">\n";
